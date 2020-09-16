@@ -1,6 +1,9 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter, Link, Redirect, Route, Switch } from 'react-router-dom';
+import Header from './components/Header';
 import NotFound from './components/NotFound';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const Photo = React.lazy(() => import('./features/Photo'));
 
 function App() {
@@ -9,6 +12,7 @@ function App() {
         <div className="photo-app">
             <Suspense fallback={<div>...loading</div>}>
                 <BrowserRouter>
+                    <Header />
                     <ul>
                         <li><Link to="/photos">Go to photo page</Link></li>
                         <li><Link to="/photos/add">Go to Add photo page</Link></li>
