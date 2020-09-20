@@ -13,11 +13,11 @@ function App() {
             <Suspense fallback={<div>...loading</div>}>
                 <BrowserRouter>
                     <Header />
-                    <ul>
+                    {/* <ul>
                         <li><Link to="/photos">Go to photo page</Link></li>
                         <li><Link to="/photos/add">Go to Add photo page</Link></li>
                         <li><Link to="/photos/123">Go to Edit photo page </Link></li>
-                    </ul>
+                    </ul> */}
                     <Switch>
                         <Redirect exact from="/" to="photos" />
                         <Route path="/photos" component={Photo} />
