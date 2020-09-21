@@ -51,9 +51,11 @@ function SelectField(props) {
             <Select
                 type={type}
                 id={name}
+
                 {...field}
                 value={selectedOption}
                 onChange={handleSelectOptionChange}
+
                 disabled={disabled}
                 placeholder={placeholder}
                 options={options}

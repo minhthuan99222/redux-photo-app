@@ -10,18 +10,18 @@ import SelectField from '../../../../custom-fields/SelectField';
 
 PhotoForm.propTypes = {
     onSubmit: PropTypes.func,
+    initialValues: PropTypes.object,
+    isAddMode: PropTypes.bool,
 };
 
 PhotoForm.defaultProps = {
     onSubmit: null,
+    initialValues: {},
+    isAddMode: false,
 }
 
 function PhotoForm(props) {
-    const initialValues = {
-        title: '',
-        categoryId: null,
-        photo: '',
-    }
+    const { initialValues, isAddMode } = props;
 
     const validationSchema = Yup.object().shape({
         title: Yup.string().required('This field is required'),
@@ -41,6 +41,7 @@ function PhotoForm(props) {
 
     const handleSubmit = (values) => {
         if (onSubmit) {
+            // values.id = 123;
             onSubmit(values);
         }
     }
@@ -83,9 +84,9 @@ function PhotoForm(props) {
 
 
                         <FormGroup>
-                            <Button type="submit" color="primary">
+                            <Button type="submit" color={isAddMode ? "primary" : "success"}>
                                 {isSubmitting && <Spinner size='sm' />}
-                                Add to album
+                                {isAddMode ? "Add to album" : "Update to album"}
                             </Button>
                         </FormGroup>
                     </Form>
