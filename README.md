@@ -1,5 +1,5 @@
-Redux Photo App được thực hiện theo hướng dẫn bởi Easy-Fontend-HauPaul
-Redux Photo App are guided by Youtube chanel Easy-Fontend-HauPaul
+# Redux Photo App được thực hiện theo hướng dẫn bởi Easy-Fontend-HauPaul
+# Redux Photo App are guided by Youtube chanel Easy-Fontend-HauPaul
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -113,7 +113,7 @@ function App() {
 }
 ```
 
-## Custom Field 
+# Custom Field 
 
 - Cầu nối giữa UI control và Formik.
 - UI control là một controlled component với props: 
@@ -162,3 +162,7 @@ Formik
 
 Yup
 
+# Authentication 
+
+StyleFireBaseUi
+FireBase
