@@ -157,3 +157,5 @@ RandomPhotoField
 Formik
 
 Yup
+
+Redux Photo App được thực hiện theo hướng dẫn bởi Easy-Fontend-HauPaul
